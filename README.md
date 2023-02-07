@@ -15,12 +15,28 @@ $ sudo yum -y update
 $ sudo yum -y install trivy
 ```
 
-show all versions
+---- 
+
+Add local repository
+```shell
+echo -e "[trivy]
+name=Trivy TEST repository
+baseurl=file:///src/rpm/releases/\044releasever/\044basearch/
+gpgcheck=0
+enabled=1" > /etc/yum.repos.d/trivy.repo
+```
+
+Update repo
+```
+yum update --refresh --repo trivy
+```
+
+Show all versions
 ```shell
 yum list trivy --showduplicates
 ```
 
-install specific version
+Install specific version
 ```shell
 yum -y install trivy-{version}
 ```
