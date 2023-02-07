@@ -8,11 +8,20 @@ function create_rpm_repo () {
         rpm_path=rpm/releases/${version}/x86_64
 
         mkdir -p $rpm_path
-        cp "dist/"*64bit.rpm ${rpm_path}/
 
-        createrepo_c -u https://github.com/aquasecurity/trivy/releases/download/ --location-prefix="v"$TRIVY_VERSION --update $rpm_path
+        rpm_tmp=rpm/releases/${version}/tmp
+        mkdir -p $rpm_tmp
+        cp "dist/"*64bit.rpm ${rpm_tmp}/
+        
+        rpm_old=rpm/releases/${version}/old
+        mkdir -p $rpm_old
+        cp -r $rpm_path/repodata $rpm_old/
 
-        rm ${rpm_path}/*64bit.rpm
+        createrepo_c -u https://github.com/aquasecurity/trivy/releases/download/ --location-prefix="v"$TRIVY_VERSION $rpm_tmp
+        mergerepo_c -v --all -r $rpm_old -r $rpm_tmp -o $rpm_path
+
+        rm -rf $rpm_tmp
+        rm -rf $rpm_old
 }
 
 VERSIONS=(5 6 7 8 9)

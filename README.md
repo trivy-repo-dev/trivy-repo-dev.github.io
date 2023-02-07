@@ -14,3 +14,13 @@ enabled=1
 $ sudo yum -y update
 $ sudo yum -y install trivy
 ```
+
+show all versions
+```shell
+yum list trivy --showduplicates
+```
+
+install specific version
+```shell
+yum -y install trivy-{version}
+```
