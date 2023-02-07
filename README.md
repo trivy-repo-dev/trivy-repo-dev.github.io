@@ -17,6 +17,10 @@ $ sudo yum -y install trivy
 
 ---- 
 
+```shell
+docker run -it --name trivy-dev --platform linux/amd64 -v $(pwd):/src centos:centos7 bash
+```
+
 Add local repository
 ```shell
 echo -e "[trivy]
