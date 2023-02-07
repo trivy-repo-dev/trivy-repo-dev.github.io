@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://linux.duke.edu/metadata/common" xmlns:rpm="http://linux.duke.edu/metadata/rpm" packages="2">
+<package type="rpm">
+  <name>trivy</name>
+  <arch>x86_64</arch>
+  <version epoch="0" ver="0.37.0" rel="1"/>
+  <checksum type="sha256" pkgid="YES">7a57a7a5c8256d6c5a0dd23168820fbf8e29324fe24cf4eca630d1bb3ec297fe</checksum>
+  <summary>A Fast Vulnerability Scanner for Containers</summary>
+  <description>A Fast Vulnerability Scanner for Containers</description>
+  <packager>Teppei Fukuda &lt;knqyf263@gmail.com&gt;</packager>
+  <url>https://github.com/aquasecurity</url>
+  <time file="1675259563" build="1675255033"/>
+  <size package="49490428" installed="185777004" archive="185777004"/>
+  <location xml:base="https://github.com/aquasecurity/trivy/releases/download/" href="v0.37.0/trivy_0.37.0_Linux-64bit.rpm"/>
+  <format>
+    <rpm:license>Apache-2.0</rpm:license>
+    <rpm:vendor>aquasecurity</rpm:vendor>
+    <rpm:group></rpm:group>
+    <rpm:buildhost>fv-az673-745</rpm:buildhost>
+    <rpm:sourcerpm>trivy-0.37.0-1.src.rpm</rpm:sourcerpm>
+    <rpm:header-range start="272" end="2144"/>
+    <rpm:provides>
+      <rpm:entry name="trivy" flags="EQ" epoch="0" ver="0.37.0" rel="1"/>
+    </rpm:provides>
+    <file>/usr/local/bin/trivy</file>
+  </format>
+</package>
+<package type="rpm">
+  <name>trivy</name>
+  <arch>x86_64</arch>
+  <version epoch="0" ver="0.37.1" rel="1"/>
+  <checksum type="sha256" pkgid="YES">0b267fdbf34f1be96ab80f275eac0aa57c806be3a62d272868cfddfebdc9304f</checksum>
+  <summary>A Fast Vulnerability Scanner for Containers</summary>
+  <description>A Fast Vulnerability Scanner for Containers</description>
+  <packager>Teppei Fukuda &lt;knqyf263@gmail.com&gt;</packager>
+  <url>https://github.com/aquasecurity</url>
+  <time file="1675752994" build="1675269076"/>
+  <size package="49486306" installed="185777004" archive="185777004"/>
+  <location xml:base="https://github.com/aquasecurity/trivy/releases/download/" href="v0.37.1/trivy_0.37.1_Linux-64bit.rpm"/>
+  <format>
+    <rpm:license>Apache-2.0</rpm:license>
+    <rpm:vendor>aquasecurity</rpm:vendor>
+    <rpm:group></rpm:group>
+    <rpm:buildhost>fv-az792-324</rpm:buildhost>
+    <rpm:sourcerpm>trivy-0.37.1-1.src.rpm</rpm:sourcerpm>
+    <rpm:header-range start="272" end="2144"/>
+    <rpm:provides>
+      <rpm:entry name="trivy" flags="EQ" epoch="0" ver="0.37.1" rel="1"/>
+    </rpm:provides>
+    <file>/usr/local/bin/trivy</file>
+  </format>
+</package>
+</metadata>
