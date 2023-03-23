@@ -10,7 +10,8 @@ function create_rpm_repo () {
         mkdir -p $rpm_path
         cp "dist/"*64bit.rpm ${rpm_path}/
 
-        createrepo_c -u https://github.com/aquasecurity/trivy/releases/download/ --location-prefix="v"$TRIVY_VERSION --update $rpm_path
+#        createrepo_c -u https://github.com/aquasecurity/trivy/releases/download/ --location-prefix="v"$TRIVY_VERSION --update $rpm_path
+        createrepo_c -u https://trivy-repo-dev.github.io/ --location-prefix="v"$TRIVY_VERSION --update $rpm_path
 
         rm ${rpm_path}/*64bit.rpm
 }
