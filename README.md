@@ -8,7 +8,7 @@ Add repository setting
 $ sudo vim /etc/yum.repos.d/trivy.repo
 [trivy]
 name=Trivy TEST repository
-baseurl=https://trivy-repo-dev.github.io/rpm/releases/$releasever/$basearch/
+baseurl=https://trivy-repo-dev.github.io/rpm/releases/$basearch/
 gpgcheck=1
 enabled=1
 gpgkey=https://trivy-repo-dev.github.io/rpm/public.key
